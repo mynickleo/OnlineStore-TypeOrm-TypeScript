@@ -16,11 +16,10 @@ export const AppDataSource = new DataSource({
     username: "postgres",
     password: "3742907",
     database: "onlinestoreorm",
-    synchronize: true,
     logging: false,
     entities: [User, Basket, MakerInfo,
     Order, OrderDetails, Product, 
     ProductType, Role],
-    migrations: [],
+    migrations: ['./src/migrations/*.ts'],
     subscribers: [],
 })

@@ -27,7 +27,10 @@
    "scripts": {
       "start": "yarn ts-node ./src/index.ts",
       "dev": "nodemon ./src/index.ts",
-      "typeorm": "typeorm-ts-node-commonjs"
+      "typeorm": "npx typeorm-ts-node-commonjs --dataSource src/data-source.ts",
+      "migration:generate" : "yarn typeorm migration:generate src/migrations/Migration",
+      "migration:run" : "yarn typeorm migration:run",
+      "migration:revert" : "yarn typeorm migration:revert"
    },
    "main": "index.js",
    "license": "MIT"
